@@ -1,0 +1,12 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+
+    <f:entry title="Webhook" description="Webhook url">
+        <f:textbox field="webhook" value="${instance.getWebhook()}" />
+    </f:entry>
+
+    <f:entry title="Send only unsuccessful" description="Sends the notification only if the build unsuccessful">
+        <f:checkbox field="onlyFail" value="${instance.isOnlyFail()}" />
+    </f:entry>
+
+</j:jelly>
